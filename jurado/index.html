@@ -80,7 +80,7 @@ textarea{width:100%;min-height:90px;border:1.5px solid var(--line);background:va
 /* menciones */
 .ment{display:flex;flex-direction:column;gap:8px}
 .ment h3{font-size:17px}
-.pick{display:grid;grid-template-columns:repeat(9,1fr);gap:5px}
+.pick{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
 .pick button{aspect-ratio:1;border-radius:10px;border:1.5px solid var(--line);background:var(--card);font-weight:800;font-family:var(--display);font-size:16px;color:var(--navy);padding:0}
 .pick button[aria-pressed="true"]{background:var(--navy);color:var(--bg);border-color:var(--navy)}
 
@@ -210,7 +210,7 @@ td.tt{font-weight:800;color:var(--navy)}
     {k:'det',n:'Conexión con el detonante',w:15,d:'Qué tan bien la palabra que les tocó quedó integrada en la canción: que tenga un papel en la letra, no que aparezca de paso.'},
     {k:'ent',n:'Entregables',w:15,d:'Completos y a tiempo (bitácora, declaración de IA, portada, letra, estructura y rider), y claros sobre cómo se construyó la canción.'}
   ];
-  var TEAMS=9, PHONE='573183589487', MNAMES={L:'Mejor letra',A:'Mejor arreglo',I:'Mejor interpretación'};
+  var TEAMS=6, PHONE='573183589487', MNAMES={L:'Mejor letra',A:'Mejor arreglo',I:'Mejor interpretación'};
 
   // ---------- Estado guardado en el celular ----------
   var KEY='mm_jurado_v1', st={judge:null,teams:{},ment:{}};
@@ -361,7 +361,7 @@ td.tt{font-weight:800;color:var(--navy)}
     m[1].split(';').forEach(function(p){
       var kv=p.split('=');if(kv.length!==2)return;
       if(kv[0]==='J')o.j=parseInt(kv[1],10);
-      else if(/^E\d$/.test(kv[0])){var v=kv[1].split(',').map(Number);if(v.length!==5)ok=false;o.teams[parseInt(kv[0].slice(1),10)]=v;}
+      else if(/^E\d$/.test(kv[0])&&parseInt(kv[0].slice(1),10)<=TEAMS){var v=kv[1].split(',').map(Number);if(v.length!==5)ok=false;o.teams[parseInt(kv[0].slice(1),10)]=v;}
       else if('LAI'.indexOf(kv[0])>=0)o[kv[0]]=parseInt(kv[1],10)||0;
     });
     return ok&&o.j?o:null;
