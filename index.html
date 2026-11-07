@@ -273,6 +273,114 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
 .prule{font-size:21px;line-height:1.45;color:#DCE5F7;border-left:4px solid var(--gold);padding-left:14px;max-width:1300px}
 @media (prefers-reduced-motion:reduce){.pin{transition:none}}
 
+
+/* ===== Celular: lectura vertical, una lámina a la vez ===== */
+body.mobile #viewport{inset:0 0 56px 0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+body.mobile #stage{position:relative;width:100% !important;height:auto !important;transform:none !important;min-height:100%;overflow:visible}
+body.mobile .slide{position:relative;inset:auto;padding:28px 20px 36px;gap:18px;min-height:calc(100dvh - 56px)}
+body.mobile .eyebrow{font-size:12px;letter-spacing:.12em}
+body.mobile h2{font-size:32px;line-height:1.1}
+body.mobile h3{font-size:19px}
+body.mobile .lead{font-size:17px}
+body.mobile .head{gap:8px}
+body.mobile .card{padding:16px 18px;border-radius:12px;gap:6px}
+body.mobile .card p{font-size:15px}
+body.mobile .num{font-size:24px}
+body.mobile .banner{font-size:15px;padding:14px 16px;flex-direction:column;align-items:flex-start;gap:4px;border-radius:12px}
+body.mobile .cards,body.mobile .people,body.mobile .agenda,body.mobile .do,body.mobile .ia,body.mobile .sem,body.mobile .decl,body.mobile .rub,body.mobile .prizes,body.mobile .faq,body.mobile .jury,body.mobile .contacts,body.mobile .info,body.mobile .rules{grid-template-columns:1fr !important}
+body.mobile .deliv{grid-template-columns:1fr 1fr !important}
+/* portada */
+body.mobile .cover h1{font-size:68px}
+body.mobile .cover .tag{font-size:19px}
+body.mobile .cover .tag:first-child{font-size:22px !important}
+body.mobile .wave{display:none}
+body.mobile .pill{font-size:14px;padding:8px 16px}
+/* cifras y recorrido */
+body.mobile .stats,body.mobile .stats.s4{grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
+body.mobile .stat b{font-size:44px}
+body.mobile .stat span{font-size:14px}
+body.mobile .journey{grid-template-columns:1fr;gap:12px}
+body.mobile .arrow{display:none}
+body.mobile .step{padding:18px;gap:8px;border-radius:14px}
+body.mobile .step .ico{width:48px;height:48px}
+body.mobile .step .ico svg{width:24px;height:24px}
+body.mobile .step h3{font-size:26px}
+body.mobile .step .when{font-size:12px}
+body.mobile .step p{font-size:15px}
+/* personas */
+body.mobile .col{gap:10px}
+body.mobile .col h3{font-size:13px}
+body.mobile .person{padding:10px 12px;gap:12px}
+body.mobile .person b{font-size:16px}
+body.mobile .person span{font-size:13px}
+body.mobile .av{width:40px;height:40px;font-size:15px}
+/* agenda */
+body.mobile .agenda{gap:18px}
+body.mobile .dayname{font-size:14px}
+body.mobile .row{font-size:15px;gap:10px;padding:8px 6px}
+body.mobile .row time{width:78px}
+body.mobile .row.now::after{font-size:11px}
+/* mentores */
+body.mobile .tlrow .who{width:96px;font-size:14px}
+body.mobile .track{height:34px}
+body.mobile .bar{top:4px;height:26px;font-size:11px}
+body.mobile .ticks{font-size:10px;height:18px}
+body.mobile .do ul{font-size:15px}
+/* IA */
+body.mobile .ia .card ul,body.mobile .sem ul{font-size:15px}
+body.mobile .sem h3{font-size:18px}
+body.mobile .light-dot{width:30px;height:30px}
+body.mobile .mark{width:30px;height:30px;font-size:17px}
+body.mobile .fields b{font-size:15px}
+body.mobile .fields span{font-size:13px}
+body.mobile .ex{font-size:14px !important}
+body.mobile .pq{font-size:19px !important}
+body.mobile .pt{font-size:12px}
+/* evaluación y premios */
+body.mobile .cbtn{padding:12px 14px}
+body.mobile .cbtn .nm{font-size:16px}
+body.mobile .cbtn .pc{font-size:24px}
+body.mobile .detail{padding:20px}
+body.mobile .detail h3{font-size:24px}
+body.mobile .detail p{font-size:15px}
+body.mobile .detail .small{font-size:13px}
+body.mobile .grand{padding:22px;gap:10px}
+body.mobile .grand h3{font-size:30px}
+body.mobile .grand ul{font-size:16px}
+body.mobile .side{gap:10px}
+/* preguntas */
+body.mobile .q{font-size:15px;padding:10px 12px}
+body.mobile .answer{padding:22px}
+body.mobile .answer h3{font-size:22px}
+body.mobile .answer p{font-size:16px}
+body.mobile .contacts .card b{font-size:17px}
+/* jurado */
+body.mobile .headrow{flex-direction:column;align-items:flex-start;gap:12px}
+body.mobile .jphoto{height:240px}
+body.mobile .jtext{padding:16px 18px}
+body.mobile .jname{font-size:26px}
+body.mobile .jdesc{font-size:15px}
+body.mobile .qmark{font-size:96px}
+body.mobile .btn{font-size:16px;padding:12px 20px}
+/* papeles */
+body.mobile .papers{grid-template-columns:repeat(3,1fr);gap:10px}
+body.mobile .paper{min-height:92px}
+body.mobile .pn{font-size:38px}
+body.mobile .pw{font-size:18px}
+body.mobile .pt2{font-size:11px}
+body.mobile .turn{font-size:15px;padding:8px 14px}
+body.mobile .prule{font-size:14px}
+/* cierre */
+body.mobile .end h2{font-size:52px}
+
+/* franjas de mentores en celular */
+.tlm{display:none}
+body.mobile .tl{display:none}
+body.mobile .tlm{display:flex;flex-direction:column;gap:8px}
+body.mobile .tlm .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)}
+body.mobile .tlm h3{color:#fff;font-size:17px}
+body.mobile .row time{width:88px;white-space:nowrap}
+
 /* cierre */
 .end{justify-content:center;align-items:flex-start;background:radial-gradient(ellipse at 20% 80%, rgba(0,56,123,.95), transparent 60%), var(--navy)}
 .end h2{font-size:132px;line-height:.95}
@@ -353,7 +461,7 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
     </div>
   </div>
   <div class="stats s4">
-    <div class="stat"><b>9</b><span>equipos</span></div>
+    <div class="stat"><b>6</b><span>equipos</span></div>
     <div class="stat"><b>4</b><span>mentores</span></div>
     <div class="stat"><b>3</b><span>talleres</span></div>
     <div class="stat"><b>3</b><span>jurados</span></div>
@@ -431,6 +539,12 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
     <div class="eyebrow">Acompañamiento</div>
     <h2>Siempre hay alguien cerca</h2>
   </div>
+  <div class="tlm">
+    <div class="card"><h3>Carolina Forero</h3><p>Viernes 4:00 a 7:00 p. m. · Sábado 8:00 a 10:30 a. m.</p></div>
+    <div class="card"><h3>Gustavo Rincón</h3><p>Viernes 5:00 a 10:00 p. m. · Sábado 8:00 a 10:30 a. m.</p></div>
+    <div class="card"><h3>Jordy Sánchez</h3><p>Viernes 5:00 a 10:00 p. m. · Sábado 8:00 a 10:30 a. m.</p></div>
+    <div class="card"><h3>Julián Crosby</h3><p>Sábado 8:00 a 10:30 a. m.</p></div>
+  </div>
   <div class="tl">
     <div class="tlrow"><div class="who"></div><div class="ticks">
       <span style="left:0;transform:none">Vie 2 p. m.</span><span style="left:16.67%">6 p. m.</span><span style="left:33.33%">10 p. m.</span><span style="left:41.67%">Sáb</span><span style="left:66.67%">6 a. m.</span><span style="left:83.33%">10 a. m.</span><span style="right:0;left:auto;transform:none">2 p. m.</span>
@@ -455,7 +569,7 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
   </div>
   <div class="cards" style="grid-template-columns:repeat(3,1fr);flex:1">
     <div class="card"><div class="num">01</div><h3>Restaurante Mesón y pérgolas</h3><p>La base de los equipos: aquí se trabaja y se come. Las pérgolas cubiertas se adaptan para descansar.</p></div>
-    <div class="card"><div class="num">02</div><h3>Tres salas de música</h3><p>Totalmente equipadas. Se usan por turnos entre los 9 equipos.</p></div>
+    <div class="card"><div class="num">02</div><h3>Tres salas de música</h3><p>Totalmente equipadas. Se usan por turnos entre los 6 equipos.</p></div>
     <div class="card"><div class="num">03</div><h3>Zonas verdes</h3><p>Alrededor del mesón, para ensayar, escribir o tomar aire.</p></div>
     <div class="card"><div class="num">04</div><h3>Salones del F</h3><p>Para la apertura y para trabajar en equipo.</p></div>
     <div class="card"><div class="num">05</div><h3>Baños del CAF</h3><p>Tienen duchas: pueden bañarse.</p></div>
@@ -694,7 +808,10 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
   [60,120,200,150,240,90,180,260,130,210,70,160,230,110,190,80,140].forEach(function(h){var s=document.createElement('span');s.style.height=h+'px';w.appendChild(s);});
 
   // La lámina se estira para ocupar toda la pantalla, sin franjas negras.
+  function isMobile(){return window.innerWidth<=820||(window.innerHeight>window.innerWidth&&window.innerWidth<1100);}
   function fit(){
+    var mob=isMobile();document.body.classList.toggle('mobile',mob);
+    if(mob){stage.style.width='';stage.style.height='';stage.style.transform='';return;}
     var vw=window.innerWidth, vh=window.innerHeight, a=vw/vh, W=1600, H=900;
     if(a>16/9){W=Math.round(900*a);}else{H=Math.round(1600/a);}
     stage.style.width=W+'px'; stage.style.height=H+'px';
@@ -713,7 +830,7 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
 
   // La barra se oculta sola mientras presentas
   var bar=document.getElementById('bar'), hideT=null;
-  function wake(){bar.classList.remove('hide');clearTimeout(hideT);hideT=setTimeout(function(){if(!notes.classList.contains('on'))bar.classList.add('hide');},2500);}
+  function wake(){bar.classList.remove('hide');clearTimeout(hideT);if(document.body.classList.contains('mobile'))return;hideT=setTimeout(function(){if(!notes.classList.contains('on'))bar.classList.add('hide');},2500);}
   ['mousemove','touchstart','keydown'].forEach(function(ev){document.addEventListener(ev,wake,{passive:true});});
   bar.addEventListener('mouseenter',function(){clearTimeout(hideT);});
 
@@ -723,6 +840,7 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
     count.textContent=(i+1)+' / '+slides.length;
     prog.style.width=((i+1)/slides.length*100)+'%';
     var sl=slides[i];
+    if(document.body.classList.contains('mobile')){document.getElementById('viewport').scrollTop=0;}
     animate(sl);
     notes.innerHTML='<b>Notas · '+(i+1)+'. '+sl.getAttribute('data-title')+'</b>'+(sl.getAttribute('data-notes')||'');
     if(!fromHash){try{history.replaceState(null,'','#s'+(i+1));}catch(e){}}
@@ -760,8 +878,8 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
   });
   // deslizar en pantallas táctiles
   var sx=null;
-  stage.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
-  stage.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60){go(dx<0?i+1:i-1);}sx=null;});
+  var sy=null;stage.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+  stage.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){go(dx<0?i+1:i-1);}sx=null;});
 
   // Agenda: marca la actividad en curso durante el evento
   function markNow(){
@@ -832,7 +950,7 @@ body.clean .pend{border-color:transparent;background:transparent;padding:0}
 
   // Papeles del detonante
   var words=['Brújula','Ceniza','Paréntesis','Péndulo','Columpio','Cicatriz','Astronauta','Telaraña','Huella','Semáforo','Paracaídas','Marea','Espejismo','Faro','Cometa'];
-  var TEAMS=9, pBox=document.getElementById('papers'), pTurn=document.getElementById('pTurn'), team, deck;
+  var TEAMS=6, pBox=document.getElementById('papers'), pTurn=document.getElementById('pTurn'), team, deck;
   function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
   function buildPapers(){
     deck=shuffle(words); team=1; pTurn.textContent='Turno: equipo 1';
